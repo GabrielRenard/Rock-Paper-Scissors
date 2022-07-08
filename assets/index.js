@@ -1,7 +1,7 @@
-const choices = document.querySelectorAll("button");
+const choices = document.querySelectorAll("img");
 const userSelectionDisplay = document.querySelector("#user-selection");
 const computerSelectionDisplay = document.querySelector("#computer-selection");
-const result = document.querySelector("#result");
+const result = document.querySelectorAll(".result");
 
 const choicesArr = ["rock", "paper", "scissors"];
 
@@ -12,7 +12,7 @@ let finalResult;
 choices.forEach(choice =>
   choice.addEventListener("click", e => {
     userChoice = e.target.id;
-    userSelectionDisplay.innerHTML = userChoice;
+    userSelectionDisplay.innerHTML = `<img src="./assets/Images/${userChoice}.png"/>`;
     computerSelection();
     endResult();
   })
@@ -26,9 +26,9 @@ function computerSelection() {
   } else if (randomIndex === 1) {
     computerChoice = "paper";
   } else {
-    computerChoice = "scissor";
+    computerChoice = "scissors";
   }
-  computerSelectionDisplay.innerHTML = computerChoice;
+  computerSelectionDisplay.innerHTML = `<img src="./assets/Images/${computerChoice}.png"/>`;
 }
 
 function endResult() {
@@ -36,12 +36,14 @@ function endResult() {
     finalResult = "Its a tie!";
   } else if (computerChoice === "rock" && userChoice === "paper") {
     finalResult = "You win!";
-  } else if (computerChoice === "scissor" && userChoice === "rock") {
+  } else if (computerChoice === "scissors" && userChoice === "rock") {
     finalResult = "You win!";
-  } else if (computerChoice === "paper" && userChoice === "scissor") {
+  } else if (computerChoice === "paper" && userChoice === "scissors") {
     finalResult = "You win!";
   } else {
     finalResult = "You lost!";
   }
-  result.innerHTML = finalResult;
+  result.forEach(item => {
+    item.innerText = finalResult;
+  });
 }
