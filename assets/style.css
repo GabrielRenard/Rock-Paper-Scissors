@@ -14,11 +14,6 @@
   src: url(./fonts/SystemGlitch-Regular.otf);
 }
 
-@font-face {
-  font-family: "heatwave";
-  src: url(./fonts/Heatwave.otf);
-}
-
 /* CSS Variables */
 :root {
   --neon-pink: hsl(317 100% 54%);
@@ -111,6 +106,7 @@ img {
 #computer-selection img {
   margin: 0;
   width: 10rem;
+  cursor: auto;
 }
 
 .results {
@@ -127,47 +123,9 @@ img {
   color: white;
   text-transform: uppercase;
   /* glitch effect */
-  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
-    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-
-  animation: glitch 300ms;
-}
-
-@keyframes glitch {
-  0% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  14% {
-    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
-      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  15% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  49% {
-    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  50% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  99% {
-    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-  100% {
-    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
-      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
-      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
+  text-shadow: 0.03em 0 0 rgba(255, 0, 0, 0.75),
+    -0.03em -0.03em 0 rgba(0, 255, 0, 0.75),
+    0.03em 0.03em 0 rgba(0, 0, 255, 0.75);
 }
 
 @media screen and (max-width: 1000px) {
